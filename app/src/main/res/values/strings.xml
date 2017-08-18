@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CustomListView_Example</string>
+
+    <!-- activity_main.xml -->
+    <string name="hint">Start typing</string>
+
+    <!-- menu_main.xml -->
+    <string name="menu_search">Search</string>
+</resources>
