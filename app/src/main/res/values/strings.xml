@@ -6,4 +6,7 @@
 
     <!-- menu_main.xml -->
     <string name="menu_search">Search</string>
+
+    <!-- MainActivity -->
+    <string name="click">You clicked on </string>
 </resources>

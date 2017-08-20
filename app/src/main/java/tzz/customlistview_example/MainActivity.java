@@ -12,8 +12,10 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -59,6 +61,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable editable) {
 
+            }
+        });
+
+        //IMPORTANT: if you filter the list you have to get the adapter for get the right element when click on a item
+        listV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Person p = (Person) adapterView.getAdapter().getItem(i);
+                Toast.makeText(getApplicationContext(),getText(R.string.click) + " " + p.getName(),Toast.LENGTH_SHORT).show();
             }
         });
     }
